@@ -12,7 +12,7 @@ pipeline {
 
     stage('Code Quality'){
       when {
-        branch 'main'
+        expression { env.GIT_BRANCH == "origin/main" }
 //        allOf {
 //          branch 'main'
 //          //expression { env.TAG_NAME != env.BRANCH_NAME }
