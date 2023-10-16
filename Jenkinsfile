@@ -6,6 +6,7 @@ pipeline {
     stage('Download Dependencies'){
       steps {
         sh 'npm install'
+        sh 'env'
       }
     }
 
