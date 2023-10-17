@@ -41,7 +41,7 @@ pipeline {
         expression { env.TAG_NAME ==~ ".*" }
       }
       steps {
-        echo 'CI'
+        sh 'zip -r backend-${TAG_NAME}.zip node_modules schema DbConfig.js index.js package.json TransactionService.js'
       }
     }
 
